@@ -1,0 +1,37 @@
+package hw1;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.junit.Test;
+
+public class GenericsDemo {
+	
+	public void findSumOfElements(List<? extends Number> elem){
+		Iterator<? extends Number> itr = elem.iterator();
+		long sum = 0;
+		while(itr.hasNext()){
+			sum+=itr.next().;
+		}
+	}
+}
+
+class testGenerics{
+	
+	public Object addObjects(Object obj1, Object obj2){
+		return ;
+	}
+	
+	@Test
+	public void testMethod() {
+
+		GenericsDemo<String> obj1 = new GenericsDemo<String>();
+		GenericsDemo<Integer> obj2 = new GenericsDemo<Integer>();
+		obj1.setT("Hello");
+		obj2.setT(2);
+		
+	}
+}
+

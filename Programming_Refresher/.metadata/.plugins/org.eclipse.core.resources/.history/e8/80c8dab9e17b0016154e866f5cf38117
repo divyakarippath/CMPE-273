@@ -1,0 +1,21 @@
+package hw1;
+
+import org.junit.Before;
+
+public class MultithreadingDemo {
+	private AddThread t1;
+	private MultiplyThread t2;
+
+	@Before
+	public void testSetup() {
+		t1=new AddThread(5);
+		t2=new MultiplyThread(5);
+	}
+	@Test
+	public void testRun(){
+		obj1.start();		
+		obj2.start();
+	}
+
+
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Local Storage Demo</title>
+<script>
+function storeData(){
+	if (typeof(Storage) !== "undefined") {
+		name = document.getElementById("name").value;
+		sid = document.getElementById("sid").value;
+		localStorage.setItem(sid, name);
+		sessionStorage.setItem(sid, name);
+	} else {
+	    alert("Storage not supported\n");
+	}
+}
+
+function retrieveLocalData(){
+	data = "";
+	for (var i = 0; i < localStorage.length; i++){
+		sid = localStorage.key(i);
+		data += localStorage.getItem(sid) + " : "+ sid + "<br>";	
+	}
+	document.getElementById('local').innerHTML = "Data from Local Storage<br>"+data;
+
+}
+function retrieveSessionData(){
+	data = "";
+	for (var i = 0; i < sessionStorage.length; i++){
+		sid = sessionStorage.key(i);
+		data += sessionStorage.getItem(sid) + " : "+ sid + "<br>";	
+	}
+	document.getElementById('session').innerHTML = "Data from Session Storage<br>"+data;
+
+}
+</script>
+</head>
+<body>
+Name: 
+<input type="text" name="name" id="name">
+Student ID: 
+<input type="text" name="sid" id="sid">
+<button onclick=storeData()>Save Data</button>
+<h3>Click to retrieve the data from storage</h3><hr><hr>
+<button onclick=retrieveLocalData()>Local Storage</button>
+<button onclick=retrieveSessionData()>Session Storage</button>
+<p id="local"></p>
+<p id="session"></p>
+</body>
+</html>

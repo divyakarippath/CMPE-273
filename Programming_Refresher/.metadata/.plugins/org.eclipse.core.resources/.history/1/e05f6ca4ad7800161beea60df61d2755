@@ -1,0 +1,73 @@
+package hw1;
+
+import java.util.LinkedList;
+import java.util.NoSuchElementException;
+import java.util.Queue;
+
+public class TestQueue {
+
+	Queue<Customers> customerList = new LinkedList<Customers>();
+
+	public void enqueue(Customers customer) {
+		try {
+			customerList.add(customer);
+		} catch (IllegalStateException e) {
+
+			e.printStackTrace();
+
+		}
+
+	}
+
+	public Customers dequeue() {
+		try {
+			if (!isEmpty()) {
+				return customerList.remove();
+			}
+		} catch (NoSuchElementException e) {
+
+			e.printStackTrace();
+
+		}
+
+		return null;
+	}
+
+	public Customers peek() {
+		return customerList.peek();
+	}
+
+	public boolean isEmpty() {
+		return (customerList.size() == 0);
+	}
+
+}
+
+class Customers {
+	String firstName;
+	String lastName;
+	int tokenNumber;
+
+	public Customers() {
+
+	}
+
+	public Customers(String fName, String lName, int tokenNumber) {
+		this.firstName = fName;
+		this.lastName = lName;
+		this.tokenNumber = tokenNumber;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public int getTokenNumber() {
+		return tokenNumber;
+	}
+
+}

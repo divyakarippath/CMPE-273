@@ -1,0 +1,19 @@
+package hw1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CollectionsDemo {
+	
+	//lexicoraphically smallest substring
+	
+	public String getSmallestSubstring(String s, int subLength){
+		List<String> stringList = new ArrayList<String>();
+		for(int i=0;i<s.length();i++){
+			Coll
+		}
+		return s;
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package hw1;
+
+public class OddThread extends Thread{
+	int number;
+
+	public void run(){
+		for(int i=0;i<1000;i+2){
+			System.out.printf("Even: %d\n",i);
+		}
+	}
+}

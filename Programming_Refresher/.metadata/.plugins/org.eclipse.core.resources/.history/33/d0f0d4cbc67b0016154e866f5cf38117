@@ -1,0 +1,19 @@
+package hw1;
+
+import java.util.Stack;
+
+public class StackDemo {
+  
+	public String reverseString(String s){
+		String reverse = "";
+		Stack<String> stack = new Stack<String>();
+		for(int i=0;i<s.length();i++){
+			stack.push(s.substring(i, i+1));
+		}
+		while(!stack.isEmpty()){
+			reverse+=stack.pop();
+		}
+		return reverse;
+		
+	}
+}

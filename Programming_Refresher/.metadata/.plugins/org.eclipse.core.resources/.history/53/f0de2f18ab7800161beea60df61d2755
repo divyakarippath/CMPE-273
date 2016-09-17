@@ -1,0 +1,23 @@
+package hw1;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class TestQueue {
+
+	public static void main(String[] args) {
+		Queue<String> customers = new LinkedList();
+		
+		// people joining the line in 
+		customers.offer("Divya");
+		customers.offer("Deepa");
+		customers.offer("Radhika");
+	}
+
+}
+
+class Customers{
+	String firstName;
+	String lastName;
+	int tokenNumber;
+}

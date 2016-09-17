@@ -1,0 +1,12 @@
+package hw1;
+
+public class SubtractLargeNumbers implements LargeNumberArithmetic {
+
+
+	@Override
+	public String subtractNumbers(String num1, String num2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

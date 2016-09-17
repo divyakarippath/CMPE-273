@@ -1,0 +1,38 @@
+package hw1;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import org.junit.Test;
+
+public class GenericsDemo {
+
+	public double findSumOfElements(List<? extends Number> elem) {
+		Iterator<? extends Number> itr = elem.iterator();
+		double sum = 0;
+		while (itr.hasNext()) {
+			sum += itr.next().doubleValue();
+		}
+		System.out.println(sum);
+		return sum;
+	}
+
+	@Test
+	public void testGeneric() {
+		List<Integer> intList = new ArrayList<Integer>();
+		List<Double> doubleList = new ArrayList<Double>();
+		List<Long> longList = new ArrayList<Long>();
+		
+		for(int i=1;i<=5;i++){
+			intList.add(i);
+			doubleList.add(0.5*i);
+			longList.add(5L+i);
+		}
+		assertEquals(findSumOfElements(Arrays.asList(1,2,3,4,5)),15);
+		
+	}
+}

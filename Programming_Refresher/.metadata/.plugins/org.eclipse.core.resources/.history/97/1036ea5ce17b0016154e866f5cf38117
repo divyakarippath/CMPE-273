@@ -1,0 +1,8 @@
+package hw1;
+
+public class AddThread extends Thread{
+	int number;
+	AddThread(int num){
+		this.number = num;
+	}
+}

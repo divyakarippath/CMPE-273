@@ -1,0 +1,5 @@
+package hw1;
+
+public interface LargeNumberArithmetic {
+	public String addNumbers(String num1, String num2);
+}

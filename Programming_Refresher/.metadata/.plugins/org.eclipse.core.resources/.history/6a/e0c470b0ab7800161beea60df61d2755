@@ -1,0 +1,43 @@
+package hw1;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class TestQueue {
+
+	public static void main(String[] args) {
+
+		Queue<Customers> customerList = new LinkedList<Customers>();
+
+	}
+
+}
+
+class Customers {
+	String firstName;
+	String lastName;
+	int tokenNumber;
+
+	public Customers() {
+
+	}
+
+	public Customers(String fName, String lName, int tokenNumber) {
+		this.firstName = fName;
+		this.lastName = lName;
+		this.tokenNumber = tokenNumber;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public int getTokenNumber() {
+		return tokenNumber;
+	}
+
+}

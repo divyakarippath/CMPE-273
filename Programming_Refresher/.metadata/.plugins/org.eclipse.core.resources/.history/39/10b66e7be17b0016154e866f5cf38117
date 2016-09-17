@@ -1,0 +1,14 @@
+package hw1;
+
+public class AddThread extends Thread{
+	int number;
+	AddThread(int num){
+		this.number = num;
+	}
+	
+	public void run(){
+		for(int i=0;i<10;i++){
+			System.out.printf("%d * %d = %d",number,i,i*number);
+		}
+	}
+}

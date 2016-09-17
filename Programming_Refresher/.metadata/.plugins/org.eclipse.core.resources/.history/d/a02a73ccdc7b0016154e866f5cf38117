@@ -1,0 +1,25 @@
+package hw1;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.junit.Test;
+
+public class GenericsDemo {
+
+	public long findSumOfElements(List<? extends Number> elem) {
+		Iterator<? extends Number> itr = elem.iterator();
+		long sum = 0;
+		while (itr.hasNext()) {
+			sum += itr.next().longValue();
+		}
+		return sum;
+	}
+
+	@Test
+	public void testGeneric() {
+
+	}
+}

@@ -1,0 +1,22 @@
+package hw1;
+
+public interface LargeNumberArithmetic {
+	public String addNumbers(String num1, String num2);
+	public String subtractNumbers(String num1, String num2);
+}
+
+class AddLargeNumbers implements LargeNumberArithmetic{
+
+	@Override
+	public String addNumbers(String num1, String num2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String subtractNumbers(String num1, String num2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

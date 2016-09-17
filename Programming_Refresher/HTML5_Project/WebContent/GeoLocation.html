@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GeoLocation Demo</title>
+<script>
+
+function getMyLocation(){
+	
+	  if (navigator.geolocation) {
+	        navigator.geolocation.getCurrentPosition(displayLocation);
+	    } else {
+	        document.getElementById('result').innerHTML = "Browser does not support geolocation";
+	    }
+}
+
+function displayLocation(coordinates){
+	document.getElementById('result').innerHTML = "Latitude: " + coordinates.coords.latitude + 
+    "<br>Longitude: " + coordinates.coords.longitude; 
+	
+}
+</script>
+</head>
+<body>
+<h3>Click to locate your current position in Google Maps</h3><hr><hr>
+<button onclick=getMyLocation()>Locate Me</button>
+<p id="result"></p>
+</body>
+</html>
